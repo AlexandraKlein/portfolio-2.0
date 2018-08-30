@@ -24,3 +24,4 @@ After that execute `npm start`, point your browser to http://localhost:3000 and 
 Add `--production` to any gulp task to activate production mode. In production mode all code will be minified and no sourcemaps are written.
 
 This project was initialized with the [es6-sass-boilerplate](https://github.com/freinbichler/es6-sass-boilerplate)
+# es6-sass-boilerplate
