@@ -1,17 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,900');
 
+$red: #b10000;
+$redHover: #c00;
+$white: #fff;
+$black: #000;
+
 body,html {
   border: 0;
   font-family: 'Roboto', Arial, sans-serif;
   line-height: 1.5;
   margin: 0;
   padding: 0;
-  background-color: black;
-  color: white;
+  background-color: $black;
+  color: $white;
 }
 
 a {
-  color: white;
+  color: $white;
   text-decoration: none;
 }
 
@@ -44,7 +49,7 @@ a {
 }
 
 .promo-text {
-  color: #fff;
+  color: $white;
   position: relative;
 
   .copy {
@@ -57,7 +62,7 @@ a {
   left: 0;
   top: 50%;
   z-index: 100;
-  width: 450px;
+  width: 85%;
   margin-left: 30px;
   padding: 10% 10% 10% 0;
   transform: translate(0,-50%);
@@ -99,41 +104,36 @@ a {
   }
 
   .button:first-child {
-    background: #b10000;
+    background: $red;
 
     &:hover {
-      border-color: #c00;
-      background-color: #c00;
+      border-color: $redHover;
+      background-color: $redHover;
     }
   }
 
   .dash {
-    background: #b10000;
+    background: $red;
+    display: block;
+    height: 3px;
+    margin-bottom: 10px;
+    width: 30px
+  }
+
+  .promo-flag {
+    background:0 0;
+    font-size: 14px;
+    line-height: 14px;
+    margin-bottom: 8px;
+    position: relative;
+    text-transform: uppercase;
+    display: inline-block;
   }
 }
 
-
-@media (min-width: 667px) {
+@media (min-width: 668px) {
   .promo-detail {
-
-    .promo-flag {
-      background:0 0;
-      display: block;
-      font-size: 14px;
-      line-height: 14px;
-      margin-bottom: 8px;
-      margin-top: -7px;
-      padding: 0;
-      position: relative;
-      text-transform: uppercase
-    }
-
-    .dash {
-      display: block;
-      height: 3px;
-      margin-bottom: 10px;
-      width: 30px
-    }
+    width: 450px;
 
     .headline {
       font-size: 36px;
