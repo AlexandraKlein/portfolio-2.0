@@ -1,3 +1,3 @@
-import Navigation from './components/navigation';
+import ScrollEvents from './components/scrollEvents';
 
-const navigation = new Navigation();
+const scrollEvents = new ScrollEvents();

@@ -1,15 +1,24 @@
 import $ from 'jquery/dist/jquery.slim';
 
-export default class Navigation {
+const ele = '.promotion-carousel';
+const $window = $(window);
+const viewportHeight = $window.height();
+
+let ui = {
+  promo: ele + ' .promotion',
+  promoText: ele + ' .promo-text'
+};
+
+export default class ScrollEvents {
 
   constructor() {
 
     $.fn.isOnScreen = function() {
       const viewport = {
-        top : $(window).scrollTop()
+        top : $window.scrollTop()
       };
 
-      viewport.bottom = viewport.top + $(window).height();
+      viewport.bottom = viewport.top + $window.height();
 
       const bounds = this.offset();
       bounds.bottom = this.offset().top + this.outerHeight();
@@ -20,25 +29,23 @@ export default class Navigation {
     const $promo = $('.promotion');
     const $promoText = $('.promo-text');
 
-    $(window).on('scroll', () => {
+    $window.on('scroll', () => {
 
-      $promo.toArray().forEach(el => {
+      $(ui.promo).toArray().forEach(el => {
         const $el = $(el);
         if ($el.isOnScreen()) {
-          for(let i=0; i<$el.length; i++) {
-            this.scrolly($el);
-          }
+          this.scrolly($el);
         }
       });
 
-      this.fadeAtTop($promoText);
+      this.fadeAtTop($(ui.promoText));
     });
   }
 
   scrolly(el) {
     const topOffset = el.offset().top;
     const height = el.height();
-    let scrollTop = $(window).scrollTop();
+    let scrollTop = $window.scrollTop();
     const maxPixels = height / 4;
     const percentageScrolled = (scrollTop - topOffset) / height;
     let backgroundOffset = maxPixels * percentageScrolled;
@@ -50,12 +57,10 @@ export default class Navigation {
 
   fadeAtTop(el) {
     const startPos = 0.25;
-    const $window = $(window);
-    const viewportHeight = $window.height();
 
     el.toArray().forEach(el => {
       const $el = $(el);
-      let position = $el.offset().top - $window.scrollTop();
+      let position = $el.offset().top - $window.scrollTop() + viewportHeight / 6;
       let opacity = position < viewportHeight * startPos ? position / (viewportHeight * startPos) * 1 : 1;
 
       $el.css('opacity', opacity);
