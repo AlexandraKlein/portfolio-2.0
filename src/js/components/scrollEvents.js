@@ -1,26 +1,15 @@
 import $ from 'jquery/dist/jquery.min';
+import IsOnScreen from './isOnScreen';
+const isOnScreen = new IsOnScreen();
 
-const ele = '.promotion-carousel';
 const $window = $(window);
 const viewportHeight = $window.height();
+const ele = '.promotion-carousel';
 
 let ui = {
   promo: ele + ' .promotion',
   promoText: ele + ' .promo-text',
   navigationItems: '.navigation a'
-};
-
-$.fn.isOnScreen = function() {
-  const viewport = {
-    top : $window.scrollTop()
-  };
-
-  viewport.bottom = viewport.top + $window.height();
-
-  const bounds = this.offset();
-  bounds.bottom = this.offset().top + this.outerHeight();
-
-  return (!(viewport.bottom < bounds.top || viewport.top > bounds.bottom));
 };
 
 export default class ScrollEvents {
@@ -29,7 +18,6 @@ export default class ScrollEvents {
     const $promo = $('.promotion');
     const $promoText = $('.promo-text');
 
-    this.updateNavigation();
 
     function smoothScroll(target) {
       $('body, html').animate({'scrollTop':target.offset().top}, 600);
@@ -44,7 +32,7 @@ export default class ScrollEvents {
 
       $(ui.promo).toArray().forEach(el => {
         const $el = $(el);
-        if ($el.isOnScreen()) {
+        if ($el.isOnScreen.constructor()) {
           this.scrolly($el);
         }
       });
@@ -52,6 +40,8 @@ export default class ScrollEvents {
       this.updateNavigation();
       this.fadeAtTop($(ui.promoText));
     });
+
+    this.updateNavigation();
   }
 
   scrolly(el) {
