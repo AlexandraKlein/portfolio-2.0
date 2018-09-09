@@ -81,7 +81,7 @@ gulp.task('scripts-reloader', ['scripts'], (done) => {
 });
 
 gulp.task('static', () => {
-  return gulp.src('src/**/*.{html,php,jpg,jpeg,png,gif,webp,mp4,svg,ico,eot,ttf,woff,woff2,otf}').pipe(gulp.dest('public'));
+  return gulp.src('src/**/*.{jpg,jpeg,png,gif,webp,mp4,svg,ico,eot,ttf,woff,woff2,otf}').pipe(gulp.dest('public'));
 });
 
 gulp.task('html', () => {
