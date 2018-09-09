@@ -8,7 +8,7 @@ import source from 'vinyl-source-stream';
 import buffer from 'vinyl-buffer';
 import path from 'path';
 import del from 'del';
-import handlebars from 'gulp-compile-handlebars';
+import nunjucksRender from 'gulp-nunjucks-render';
 import notifier from 'node-notifier';
 
 const $ = gulploadplugins({
@@ -84,22 +84,22 @@ gulp.task('static', () => {
   return gulp.src('src/**/*.{html,php,jpg,jpeg,png,gif,webp,mp4,svg,ico,eot,ttf,woff,woff2,otf}').pipe(gulp.dest('public'));
 });
 
-gulp.task('templates', () => {
+gulp.task('html', () => {
   return gulp.src([
-    'src/**/*.hbs',
-    '!src/partials/*.hbs'
+    'src/**/*.html',
+    '!src/templates/**/*',
+    '!src/content/**/*'
   ])
-    .pipe(handlebars({}, {
-      batch: 'src/partials'
-    }))
-    .pipe($.rename((path) => {
-      path.extname = '.html'
-    }))
+    .pipe(
+      nunjucksRender({
+        path: ['src/templates/']
+      })
+    )
     .pipe(gulp.dest('public'));
 });
 
 // Browser-Sync
-gulp.task('serve', ['styles', 'scripts', 'templates', 'static'], () => {
+gulp.task('serve', ['styles', 'scripts', 'html', 'static'], () => {
   browserSync({
     notify: false,
     server: ['.tmp', 'public']
@@ -107,10 +107,10 @@ gulp.task('serve', ['styles', 'scripts', 'templates', 'static'], () => {
 
   gulp.watch(['src/sass/**/*.{scss,css}'], ['styles']);
   gulp.watch(['src/js/**/*.js'], ['scripts-reloader']);
-  gulp.watch(['src/**/*.hbs'], ['templates']).on('change', browserSync.reload);
+  gulp.watch(['src/**/*.html'], ['html']).on('change', browserSync.reload);
   gulp.watch(['src/**/*.{html,php,jpg,jpeg,png,gif,webp,mp4,svg,ico,eot,ttf,woff,woff2,otf}'], ['static']).on('change', (event) => {
     browserSync.reload();
-    if(event.type === 'deleted') {
+    if (event.type === 'deleted') {
       let filePathFromSrc = path.relative(path.resolve('src'), event.path);
       let destFilePath = path.resolve('public', filePathFromSrc);
       console.log(`deleting ${destFilePath}...`);
@@ -119,4 +119,4 @@ gulp.task('serve', ['styles', 'scripts', 'templates', 'static'], () => {
   });
 });
 
-gulp.task('build', ['styles', 'scripts', 'templates', 'static']);
+gulp.task('build', ['styles', 'scripts', 'html', 'static']);
