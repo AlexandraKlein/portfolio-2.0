@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,900');
-
-$red: #b10000;
-$redHover: #c00;
-$white: #fff;
-$black: #000;
+@import 'config/variables';
 
 body,html {
   border: 0;
