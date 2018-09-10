@@ -15,10 +15,6 @@ let ui = {
 export default class ScrollEvents {
 
   constructor() {
-    const $promo = $('.promotion');
-    const $promoText = $('.promo-text');
-
-
     function smoothScroll(target) {
       $('body, html').animate({'scrollTop':target.offset().top}, 600);
     }
