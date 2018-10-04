@@ -10,6 +10,11 @@ Gulp tasks deploy your compiled and packed styles (one `styles.css`) and scripts
 npm install
 ```
 
+#### Update Node Version
+```bash
+nvm use 8.9
+```
+
 After that execute `npm start`, point your browser to http://localhost:3000 and start adding and editing files in `src`.
 
 ## Scripts
