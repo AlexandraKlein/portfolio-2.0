@@ -1,6 +1,6 @@
 import $ from 'jquery/dist/jquery.min';
-import IsOnScreen from './isOnScreen';
-const isOnScreen = new IsOnScreen();
+import { isOnScreen } from './libs';
+
 
 const $window = $(window);
 const viewportHeight = $window.height();
@@ -28,7 +28,8 @@ export default class ScrollEvents {
 
       $(ui.promo).toArray().forEach(el => {
         const $el = $(el);
-        if ($el.isOnScreen.constructor()) {
+        if (isOnScreen($el)) {
+          console.log($el);
           this.scrolly($el);
         }
       });
