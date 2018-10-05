@@ -29,7 +29,6 @@ export default class ScrollEvents {
       $(ui.promo).toArray().forEach(el => {
         const $el = $(el);
         if (isOnScreen($el)) {
-          console.log($el);
           this.scrolly($el);
         }
       });
