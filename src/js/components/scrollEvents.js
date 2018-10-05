@@ -69,11 +69,8 @@ export default class ScrollEvents {
     $(ui.promo).toArray().forEach((el) => {
       let $el = $(el);
       let activeSection = $(`.navigation a[href="#${$el.attr('id')}"]`).data('number') - 1;
-      if ( ( $el.offset().top - $window.height()/2 < $window.scrollTop() ) && ( $el.offset().top + $el.height() - $window.height()/2 > $window.scrollTop() ) ) {
-        $(ui.navigationItems).eq(activeSection).addClass('active');
-      } else {
-        $(ui.navigationItems).eq(activeSection).removeClass('active');
-      }
+      const isActive = ( $el.offset().top - $window.height()/2 < $window.scrollTop() ) && ( $el.offset().top + $el.height() - $window.height()/2 > $window.scrollTop() ) ? 'active' : '';
+      $(ui.navigationItems).eq(activeSection).removeClass('active').addClass(isActive);
     });
   }
 };
