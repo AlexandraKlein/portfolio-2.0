@@ -30,3 +30,4 @@ Add `--production` to any gulp task to activate production mode. In production m
 
 This project was initialized with the [es6-sass-boilerplate](https://github.com/freinbichler/es6-sass-boilerplate)
 # es6-sass-boilerplate
+# portfolio-2.0
