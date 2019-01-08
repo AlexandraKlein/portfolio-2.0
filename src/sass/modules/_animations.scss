@@ -76,12 +76,13 @@
   0% {
     width: 120vmax;
     height: 120vmax;
-    background-color: $dark-gray-blue;
+    opacity: 0;
   }
 
   100% {
     width: 45vw;
     height: 45vw;
+    opacity: 1;
   }
 }
 
@@ -90,12 +91,13 @@
   0% {
     width: 45vw;
     height: 45vw;
+    opacity: 1;
   }
 
   100% {
     width: 120vmax;
     height: 120vmax;
-    background-color: $dark-gray-blue;
+    opacity: 0;
   }
 }
 
@@ -103,18 +105,20 @@
   0% {
     width: 120vmax;
     height: 120vmax;
-    background-color: $dark-gray-blue;
+    opacity: 0;
   }
 
   100% {
     width: 60vmax;
     height: 60vmax;
+    opacity: 1;
   }
 }
 
 
 @keyframes circleOutMobile {
   0% {
+    opacity: 1;
     width: 60vmax;
     height: 60vmax;
   }
@@ -122,7 +126,7 @@
   100% {
     width: 120vmax;
     height: 120vmax;
-    background-color: $dark-gray-blue;
+    opacity: 0;
   }
 }
 
