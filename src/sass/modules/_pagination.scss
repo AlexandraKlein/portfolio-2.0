@@ -17,11 +17,11 @@
     }
 
     a {
-      color: $white;
+      color: lighten($gray-blue, 10%);
       transition: all .2s ease-in;
 
       &.active {
-        color: $gray-blue;
+        color: $white;
       }
     }
   }

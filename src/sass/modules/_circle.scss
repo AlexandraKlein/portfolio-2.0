@@ -15,7 +15,11 @@
     }
 
     &.blue {
-      background-color: $gray-blue;;
+      background-color: $gray-blue;
+    }
+
+    &.pink {
+      @extend %gradient-pink;
     }
 
     .me {

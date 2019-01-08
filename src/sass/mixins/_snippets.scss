@@ -31,3 +31,15 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+%gradient-blue {
+  @include background-gradient(-45deg, $dark-gray-blue, $gray-blue, 1);
+}
+
+%gradient-pink {
+  @include background-gradient(45deg, darken($pink, 10%), $light-pink, 1);
+}
+
+%gradient-blue-alt {
+  @include background-gradient(45deg, darken($dark-gray-blue, 10%), $dark-gray-blue, 1);
+}

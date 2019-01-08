@@ -3,6 +3,7 @@
   height: 100vh;
   overflow: hidden;
   background-color: $base;
+  @extend %gradient-blue;
   transition: all $ease $duration;
 
   @include tablet {
