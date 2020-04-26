@@ -171,13 +171,13 @@
   ]
 %}
 
-{% extends "layout.html" %}
+{% extends "templates/layout.html" %}
 
 {% block main %}
 
   <section class="main-section scroll-section projects active" data-section-name="carousel">
 
-    {% include "carousel.html" %}
+    {% include "templates/carousel.html" %}
 
   </section>
 
@@ -185,7 +185,7 @@
 
     <div class="circle blue"></div>
 
-    {% include "video.html" %}
+    {% include "templates/video.html" %}
 
   </section>
 
@@ -218,8 +218,8 @@
     </div>
 </section>
 
-{% include "arrows.html" %}
+{% include "templates/arrows.html" %}
 
-{% include "pagination.html" %}
+{% include "templates/pagination.html" %}
 
 {% endblock %}

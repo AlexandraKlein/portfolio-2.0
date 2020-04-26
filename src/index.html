@@ -1,7 +1,7 @@
 {% set page_title = "Home" %}
 {% set namespace = "home" %}
 
-{% extends "layout.html" %}
+{% extends "templates/layout.html" %}
 
 {% set paginations = [
     {
@@ -74,9 +74,9 @@
 
   </section>
 
-  {% include "arrows.html" %}
+  {% include "templates/arrows.html" %}
 
-  {% include "pagination.html" %}
+  {% include "templates/pagination.html" %}
 
 {% endblock %}
 
