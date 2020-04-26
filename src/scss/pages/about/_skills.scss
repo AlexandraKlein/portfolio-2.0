@@ -75,7 +75,8 @@ body.about {
 
     $skill-tiles-names: angular babel backbone bootstrap css3 es6 foundation
       gatsby git grunt gulp handlebars html5 javascript jira laravel less nodejs
-      npm php react require sass snap svg travis vue webpack wordpress docker;
+      npm php react react_native require sass snap svg travis typescript vue
+      webpack wordpress docker;
 
     @each $skill-tile-name in $skill-tiles-names {
       &.#{$skill-tile-name} {
@@ -87,6 +88,7 @@ body.about {
 
         &:after {
           content: "#{$skill-tile-name}";
+          text-transform: uppercase;
         }
       }
     }

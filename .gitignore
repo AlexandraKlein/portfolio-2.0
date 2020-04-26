@@ -2,3 +2,5 @@ node_modules/
 .tmp/
 dist/
 .idea
+
+.DS_Store
