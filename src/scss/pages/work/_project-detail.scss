@@ -1,14 +1,13 @@
 body.projects {
-
   section.main-section {
-    background-color: $gray-blue;
+    background-color: $base-light;
     border-bottom: none;
 
     .img-intro {
       width: 83%;
       @extend .align-both;
       opacity: 0;
-      animation: fadeIn $duration forwards $duration*1.5;
+      animation: fadeIn $duration forwards $duration * 1.5;
       //mix-blend-mode: overlay;
     }
 
@@ -38,7 +37,7 @@ body.projects {
           display: inline-block;
 
           &:before {
-            content: '';
+            content: "";
             position: absolute;
             width: 10px;
             height: 10px;
@@ -53,7 +52,7 @@ body.projects {
   }
 
   section.project {
-    background-color: $gray-blue;
+    background-color: $base-light;
     border: 20px solid $white;
     border-top: none;
     padding: 5vw;
@@ -84,17 +83,17 @@ body.projects {
         }
 
         &:after {
-          content:  '';
+          content: "";
           position: absolute;
           width: 110%;
           height: 100%;
           top: 0;
           left: -10%;
-          background-color: $pink;
+          background-color: $highlight;
           transition: width $duration/2 $ease;
         }
 
-        &:nth-of-type(even){
+        &:nth-of-type(even) {
           &:after {
             right: -10%;
             left: auto;

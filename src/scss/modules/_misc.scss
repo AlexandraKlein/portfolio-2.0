@@ -1,17 +1,17 @@
-::selection{
-  background:rgba($gray-blue, 0.5);
-  color: $white;
+::selection {
+  background: rgba($base-light, 0.5);
+  color: $base-text;
   text-shadow: none;
 }
 
-::-moz-selection{
-  background:rgba($gray-blue, 0.5);
-  color: $white;
+::-moz-selection {
+  background: rgba($base-light, 0.5);
+  color: $base-text;
   text-shadow: none;
 }
 
-::-webkit-selection{
-  background:rgba($gray-blue, 0.5);
-  color: $white;
+::-webkit-selection {
+  background: rgba($base-light, 0.5);
+  color: $base-text;
   text-shadow: none;
 }

@@ -1,5 +1,4 @@
 body.contact {
-
   .copy {
     p {
       span {
@@ -9,6 +8,6 @@ body.contact {
   }
 
   .link {
-    @include anchorLink($gray-blue)
+    @include anchorLink($base-light);
   }
 }

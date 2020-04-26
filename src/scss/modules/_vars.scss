@@ -1,17 +1,21 @@
-@import url('https://fonts.googleapis.com/css?family=Anton|Work+Sans:400|Heebo:900');
+@import url("https://fonts.googleapis.com/css?family=Anton|Work+Sans:400|Heebo:900");
 
-$gray-blue: #64718C;
-$dark-gray-blue: #374A67;
-$pink: #EFD0CA;
+$dark-gray-blue: #374a67;
+$gray-blue: #64718c;
+$pink: #efd0ca;
 
-$base: $dark-gray-blue;
+$base: #eee;
+$base-light: rgb(155, 184, 184);
+$highlight: $pink;
 
 $white: #fff;
 $black: #000;
 
-$header-font: 'Heebo', sans-serif;
-$body-font: 'Work Sans', sans-serif;
+$base-text: $black;
 
-$duration: .75s;
+$header-font: "Heebo", sans-serif;
+$body-font: "Work Sans", sans-serif;
+
+$duration: 0.75s;
 //$ease: cubic-bezier(1, 0, 0.5, 1);
 $ease: ease-in-out;

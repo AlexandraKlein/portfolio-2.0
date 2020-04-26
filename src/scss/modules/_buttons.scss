@@ -1,7 +1,7 @@
 $btn-width: 250px !default;
 $btn-height: 80px !default;
-$btn-color-desktop: lighten($gray-blue, 20%);
-$btn-color-mobile: lighten($gray-blue, 10%);
+$btn-color-desktop: $black;
+$btn-color-mobile: darken($base-light, 10%);
 
 @mixin button($btn-color) {
   box-sizing: border-box;
@@ -23,7 +23,7 @@ $btn-color-mobile: lighten($gray-blue, 10%);
 
   @include mobile {
     background-color: $btn-color;
-    color: $white;
+    color: $base-text;
     line-height: 40px;
     height: 40px;
     margin-top: 15px;
@@ -61,12 +61,12 @@ $btn-color-mobile: lighten($gray-blue, 10%);
   @include button($btn-color-desktop);
 
   @include mobile {
-    @include  button($btn-color-mobile)
+    @include button($btn-color-mobile);
   }
 
   &.dark {
     @include mobile {
-      @include  button($dark-gray-blue);
+      @include button($dark-gray-blue);
       display: inline-table !important;
     }
   }

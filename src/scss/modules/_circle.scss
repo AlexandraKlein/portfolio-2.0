@@ -1,5 +1,4 @@
 .main-section {
-
   .circle {
     @extend .vertical-align;
     position: relative;
@@ -7,15 +6,15 @@
     height: 120vmax;
     border-radius: 100%;
     margin: auto;
-    background-color: $pink;
-    transition: background-color .75s ease-in-out;
+    background-color: $highlight;
+    transition: background-color 0.75s ease-in-out;
 
     &:not(.blue) {
-      background-color: $pink;
+      background-color: $highlight;
     }
 
     &.blue {
-      background-color: $gray-blue;;
+      background-color: $base-light;
     }
 
     .me {
@@ -24,7 +23,7 @@
       width: 100%;
       right: 0;
       bottom: 0;
-      animation: fadeOut .2s ease-in forwards 1s;
+      animation: fadeOut 0.2s ease-in forwards 1s;
     }
 
     @include tablet {
@@ -75,10 +74,9 @@
   }
 
   section.projects {
-
     .slick-active {
       .circle {
-        background-color: $pink;
+        background-color: $highlight;
         animation: circleOut $duration $ease forwards;
 
         @include mobile {
