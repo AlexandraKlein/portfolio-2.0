@@ -5,7 +5,7 @@ import { SlickCarousel } from "./carousels";
 import { Parallax } from "./parallax";
 import { VideoPlayer } from "./video";
 import { DirectionAwareButton } from "./buttonEffect";
-import scrollify from "jquery-scrollify";
+import "jquery-scrollify";
 
 const $document = $(document);
 const $body = $("body");

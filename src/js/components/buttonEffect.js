@@ -1,15 +1,15 @@
 export function DirectionAwareButton() {
-  $('.btn')
-    .on('mouseenter', function(e) {
+  $(".btn")
+    .on("mouseenter", function (e) {
       const parentOffset = $(this).offset();
       const relX = e.pageX - parentOffset.left;
       const relY = e.pageY - parentOffset.top;
-      $(this).find('span').css({top:relY, left:relX})
+      $(this).find("span").css({ top: relY, left: relX });
     })
-    .on('mouseout', function(e) {
+    .on("mouseout", function (e) {
       const parentOffset = $(this).offset();
       const relX = e.pageX - parentOffset.left;
       const relY = e.pageY - parentOffset.top;
-      $(this).find('span').css({top:relY, left:relX})
+      $(this).find("span").css({ top: relY, left: relX });
     });
 }
