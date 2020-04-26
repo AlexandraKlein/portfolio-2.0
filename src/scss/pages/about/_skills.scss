@@ -38,7 +38,7 @@ body.about {
     cursor: pointer;
     opacity: 0;
     transform: translateY(5vw);
-    transition: all .2s ease-out .5s;
+    transition: all 0.2s ease-out 0.5s;
     transition-delay: 0s;
 
     .active & {
@@ -47,7 +47,7 @@ body.about {
 
       @for $i from 1 to 30 {
         &:nth-child(#{$i}) {
-          transition-delay: .5 + $i/100 + s;
+          transition-delay: 0.5 + $i/100 + s;
         }
       }
     }
@@ -59,11 +59,10 @@ body.about {
       text-align: center;
       width: 100%;
       opacity: 0;
-      transition: all .2s ease-in;
+      transition: all 0.2s ease-in;
     }
 
     &:hover {
-
       &:after {
         opacity: 1;
       }
@@ -74,15 +73,20 @@ body.about {
       min-width: 5rem;
     }
 
-    $skill-tiles-names: angular babel backbone bootstrap css3 es6 foundation gatsby git grunt gulp handlebars html5 javascript jira laravel less nodejs npm php react require sass snap svg travis vue webpack wordpress docker;
+    $skill-tiles-names: angular babel backbone bootstrap css3 es6 foundation
+      gatsby git grunt gulp handlebars html5 javascript jira laravel less nodejs
+      npm php react require sass snap svg travis vue webpack wordpress docker;
 
     @each $skill-tile-name in $skill-tiles-names {
       &.#{$skill-tile-name} {
-        background: url("../img/skills/#{$skill-tile-name}.svg") center center no-repeat;
+        background: url("../assets/skills/#{$skill-tile-name}.svg")
+          center
+          center
+          no-repeat;
         background-size: 50%;
 
         &:after {
-          content: '#{$skill-tile-name}';
+          content: "#{$skill-tile-name}";
         }
       }
     }

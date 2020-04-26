@@ -19,7 +19,7 @@ const shared = {
     return del(["dist"]);
   },
   assets: () => {
-    return gulp.src("src/img/**/*").pipe(gulp.dest("dist/img"));
+    return gulp.src("src/assets/**/*").pipe(gulp.dest("dist/assets"));
   },
   help: (done) => {
     console.info(

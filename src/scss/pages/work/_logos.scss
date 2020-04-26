@@ -37,7 +37,7 @@ body.work {
     max-height: 15rem;
     opacity: 0;
     transform: translateY(5vw);
-    transition: all .2s ease-out .5s;
+    transition: all 0.2s ease-out 0.5s;
 
     .active & {
       transform: translateY(0);
@@ -45,7 +45,7 @@ body.work {
 
       @for $i from 1 to 20 {
         &:nth-child(#{$i}) {
-          transition-delay: .5 + $i/50 + s;
+          transition-delay: 0.5 + $i/50 + s;
         }
       }
     }
@@ -55,15 +55,17 @@ body.work {
       min-width: 7rem;
     }
 
-    $client-tiles-names: vw target carvana tacobell fosterfarms answerfinancial zillow sevenup vanityfair cmab anthem motts canadadry deutsch steelhead;
+    $client-tiles-names: vw target carvana tacobell fosterfarms answerfinancial
+      zillow sevenup vanityfair cmab anthem motts canadadry deutsch steelhead;
 
     @each $client-tile-name in $client-tiles-names {
       &.#{$client-tile-name} {
-        background: url("../img/logos/#{$client-tile-name}-logo.svg?v=4") center center no-repeat;
+        background: url("../assets/logos/#{$client-tile-name}-logo.svg?v=4")
+          center
+          center
+          no-repeat;
         background-size: contain;
       }
     }
-
-
   }
 }
