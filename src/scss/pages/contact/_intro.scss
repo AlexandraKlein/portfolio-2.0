@@ -8,6 +8,6 @@ body.contact {
   }
 
   .link {
-    @include anchorLink($base-light);
+    @include anchorLink($gray-blue);
   }
 }

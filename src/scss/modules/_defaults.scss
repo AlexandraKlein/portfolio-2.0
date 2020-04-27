@@ -32,7 +32,7 @@ a {
 }
 
 .link {
-  @include anchorLink($dark-gray-blue);
+  @include anchorLink($base);
 }
 
 .barba-container {
