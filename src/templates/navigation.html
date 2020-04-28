@@ -1,9 +1,8 @@
 <nav>
   <ul>
-    <li><a href="/">home</a></li>
-    <li><a href="work.html">work</a></li>
-    <li><a href="about.html">about</a></li>
-    <li><a href="contact.html">contact</a></li>
-    <li><a href="https://codepen.io/AliKlein/" target="_blank">pens</a></li>
+    {% for navigation in navigations %}
+      <li class="{{ navigation.name }}"><a href="{{ navigation.url }}" target="{% if navigation.name == "pens" %}_blank{% else %}_self{% endif %}">{{ navigation.name }}</a></li>
+    {% endfor %}
   </ul>
 </nav>
+

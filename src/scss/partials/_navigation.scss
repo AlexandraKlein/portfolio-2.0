@@ -36,6 +36,10 @@ nav {
         transition: opacity 0.2s ease-in;
       }
 
+      &:hover &:before {
+        opacity: 0.5;
+      }
+
       a {
         color: $base-text;
       }
@@ -45,41 +49,33 @@ nav {
 
 body {
   &.home {
-    nav ul li {
-      &:first-of-type {
-        &:before {
-          opacity: 1;
-        }
+    nav ul li.home {
+      &:before {
+        opacity: 1;
       }
     }
   }
 
   &.work {
-    nav ul li {
-      &:nth-of-type(2) {
-        &:before {
-          opacity: 1;
-        }
+    nav ul li.work {
+      &:before {
+        opacity: 1;
       }
     }
   }
 
   &.about {
-    nav ul li {
-      &:nth-of-type(3) {
-        &:before {
-          opacity: 1;
-        }
+    nav ul li.about {
+      &:before {
+        opacity: 1;
       }
     }
   }
 
   &.contact {
-    nav ul li {
-      &:nth-of-type(4) {
-        &:before {
-          opacity: 1;
-        }
+    nav ul li.contact {
+      &:before {
+        opacity: 1;
       }
     }
   }
