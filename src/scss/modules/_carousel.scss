@@ -137,15 +137,19 @@
     li {
       width: 7px;
       height: 7px;
-      margin: 0 7px;
+      margin: 0 5px;
       background-color: $base-light;
       border-radius: 100%;
-      transition: background-color 0.2s ease;
+      transition: all 0.2s ease;
 
       &.slick-active {
         width: 12px;
         height: 12px;
         background-color: lighten($base-light, 20%);
+      }
+
+      &:hover {
+        background-color: lighten($base-light, 10%);
       }
     }
 
