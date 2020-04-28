@@ -23,6 +23,12 @@ nav {
         font-size: 14px;
       }
 
+      &:hover {
+        &:before {
+          opacity: 0.3;
+        }
+      }
+
       &:before {
         content: "";
         position: absolute;
@@ -34,10 +40,6 @@ nav {
         z-index: -1;
         opacity: 0;
         transition: opacity 0.2s ease-in;
-      }
-
-      &:hover &:before {
-        opacity: 0.5;
       }
 
       a {
