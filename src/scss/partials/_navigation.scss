@@ -51,7 +51,7 @@ nav {
 
 body {
   &.home {
-    nav ul li.home {
+    nav li.home {
       &:before {
         opacity: 1;
       }
@@ -59,7 +59,7 @@ body {
   }
 
   &.work {
-    nav ul li.work {
+    nav li.work {
       &:before {
         opacity: 1;
       }
@@ -67,7 +67,7 @@ body {
   }
 
   &.about {
-    nav ul li.about {
+    nav li.about {
       &:before {
         opacity: 1;
       }
@@ -75,7 +75,7 @@ body {
   }
 
   &.contact {
-    nav ul li.contact {
+    nav li.contact {
       &:before {
         opacity: 1;
       }
