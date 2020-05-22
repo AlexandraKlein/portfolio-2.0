@@ -20,7 +20,6 @@
   }
 }
 
-
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -76,7 +75,7 @@
   0% {
     width: 120vmax;
     height: 120vmax;
-    background-color: $dark-gray-blue;
+    background-color: $base-light;
   }
 
   100% {
@@ -84,7 +83,6 @@
     height: 45vw;
   }
 }
-
 
 @keyframes circleOut {
   0% {
@@ -95,7 +93,7 @@
   100% {
     width: 120vmax;
     height: 120vmax;
-    background-color: $dark-gray-blue;
+    background-color: $base-light;
   }
 }
 
@@ -103,7 +101,7 @@
   0% {
     width: 120vmax;
     height: 120vmax;
-    background-color: $dark-gray-blue;
+    background-color: $base-light;
   }
 
   100% {
@@ -111,7 +109,6 @@
     height: 60vmax;
   }
 }
-
 
 @keyframes circleOutMobile {
   0% {
@@ -125,4 +122,3 @@
     background-color: $dark-gray-blue;
   }
 }
-

@@ -1,6 +1,30 @@
 <!doctype html>
 <html class="no-js">
 
+{% set navigations = [
+    {
+      "name": "home",
+      "url": "/"
+    },
+    {
+      "name": "work",
+      "url": "work.html"
+    },
+      {
+      "name": "about",
+      "url": "about.html"
+    },
+      {
+      "name": "contact",
+      "url": "contact.html"
+    },
+    {
+      "name": "pens",
+      "url" : "https://codepen.io/AliKlein/"
+    }
+  ]
+%}
+
 {% include "templates/head.html" %}
 
 <body class="{{ namespace }}" id="{{ namespace }}">

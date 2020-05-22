@@ -6,18 +6,17 @@
   top: 0;
 
   .slide {
-    position:relative;
+    position: relative;
     width: 100vw !important;
     height: 95vh;
 
     .titles > * {
       opacity: 0;
       transform: translateX(20vw);
-      transition: .5s;
+      transition: 0.5s;
     }
 
     &.animate {
-
       .titles > * {
         opacity: 1;
         transform: translateX(0);
@@ -59,17 +58,16 @@
     }
   }
 
-
   .titles {
     position: absolute;
     left: 12.5vw;
     height: 50vw;
-    color: $white;
+    color: $base-text;
     margin-top: 10vw;
     @extend .vertical-align;
 
     @include tablet {
-      @include textShadow($dark-gray-blue, .5);
+      @include textShadow($white, 0.5);
     }
 
     @include mobile {
@@ -111,7 +109,7 @@
 
   .slick-slide {
     outline: 0;
-    transition: opacity .5s ease-in;
+    transition: opacity 0.5s ease-in;
 
     &:not(.slick-current) {
       opacity: 0;
@@ -140,14 +138,18 @@
       width: 7px;
       height: 7px;
       margin: 0 7px;
-      background-color: $gray-blue;
+      background-color: $base-light;
       border-radius: 100%;
-      transition: background-color .2s ease;
+      transition: background-color 0.2s ease;
 
       &.slick-active {
         width: 12px;
         height: 12px;
-        background-color: lighten($gray-blue, 20%);
+        background-color: lighten($base-light, 20%);
+      }
+
+      &:hover {
+        background-color: lighten($base-light, 10%);
       }
     }
 
@@ -192,14 +194,12 @@
 }
 
 .main-section.projects {
-
   .carousel {
-
     .devices {
       position: relative;
       display: flex;
       height: 100%;
-      transition: opacity .3s ease-out;
+      transition: opacity 0.3s ease-out;
 
       img {
         position: absolute;
@@ -234,7 +234,7 @@
     }
 
     .about {
-      color: $white;
+      color: $base-text;
       @extend .align-both;
       opacity: 0;
       pointer-events: none;
@@ -262,19 +262,20 @@
         list-style: none;
 
         &:before {
-          content: '';
+          content: "";
           position: absolute;
           width: 20px;
           height: 100%;
           top: 0;
           left: 0;
-          background-color: $dark-gray-blue;
+          background-color: $base;
           z-index: -1;
         }
       }
 
-      li, a {
-        font-size: calc(.5em + 1vw);
+      li,
+      a {
+        font-size: calc(0.5em + 1vw);
 
         @include mobile {
           font-size: 18px;
@@ -283,16 +284,13 @@
     }
 
     .slide.open {
-
       .circle {
-
         @include tablet {
           z-index: 1;
         }
       }
 
       .titles {
-
         > *:not(.btn) {
           opacity: 0;
           pointer-events: none;
@@ -314,12 +312,11 @@
 .landing-animation {
   .devices img {
     opacity: 0;
-    animation: fadeIn .5s ease-in forwards 1.5s;
+    animation: fadeIn 0.5s ease-in forwards 1.5s;
   }
 }
 
 .transition-in {
-
   .circle {
     .devices {
       opacity: 1;
@@ -328,7 +325,6 @@
 }
 
 .transition-out {
-
   .circle {
     .devices {
       opacity: 0;

@@ -23,68 +23,62 @@ nav {
         font-size: 14px;
       }
 
+      &:hover {
+        &:before {
+          opacity: 0.3;
+        }
+      }
+
       &:before {
-        content: '';
+        content: "";
         position: absolute;
         @extend .align-both;
         width: 30px;
         height: 30px;
         border-radius: 100%;
-        background-color: $gray-blue;
+        background-color: $base-light;
         z-index: -1;
         opacity: 0;
-        transition: opacity .2s ease-in;
+        transition: opacity 0.2s ease-in;
       }
 
       a {
-        color: $white;
+        color: $base-text;
       }
     }
   }
 }
 
 body {
-
   &.home {
-    nav ul li {
-      &:first-of-type {
-        &:before {
-          opacity: 1;
-        }
+    nav li.home {
+      &:before {
+        opacity: 1;
       }
     }
   }
 
   &.work {
-    nav ul li {
-      &:nth-of-type(2) {
-        &:before {
-          opacity: 1;
-        }
+    nav li.work {
+      &:before {
+        opacity: 1;
       }
     }
   }
 
   &.about {
-    nav ul li {
-      &:nth-of-type(3) {
-        &:before {
-          opacity: 1;
-        }
+    nav li.about {
+      &:before {
+        opacity: 1;
       }
     }
   }
 
   &.contact {
-    nav ul li {
-      &:nth-of-type(4) {
-        &:before {
-          opacity: 1;
-        }
+    nav li.contact {
+      &:before {
+        opacity: 1;
       }
     }
   }
 }
-
-
-

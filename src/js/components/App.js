@@ -5,7 +5,7 @@ import { SlickCarousel } from "./carousels";
 import { Parallax } from "./parallax";
 import { VideoPlayer } from "./video";
 import { DirectionAwareButton } from "./buttonEffect";
-import scrollify from "jquery-scrollify";
+import "jquery-scrollify";
 
 const $document = $(document);
 const $body = $("body");
@@ -154,7 +154,7 @@ export default class App {
       $document.trigger("allPagesEnter");
     });
 
-    Barba.Dispatcher.on("initStateChange", (currentStatus) => {
+    Barba.Dispatcher.on("initStateChange", currentStatus => {
       $document.trigger("initStateChange");
     });
 
@@ -239,7 +239,7 @@ export default class App {
       $(".pagination a")
         .toArray()
         .forEach((el, i) => {
-          $(el).click((e) => {
+          $(el).click(e => {
             e.preventDefault();
             $.scrollify.move(i);
           });
