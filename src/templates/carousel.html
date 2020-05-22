@@ -9,7 +9,13 @@
           <img src="assets/projects/devices/laptop-{{ slide.project }}.png" class="laptop" alt="{{ slide.project }}"/>
           <img src="assets/projects/devices/mobile-{{ slide.project }}.png" class="mobile" alt="{{ slide.project }}"/>
         </div>
-        <div class="about">
+      </div>
+      <div class="titles">
+        <h2>{{ slide.headline|safe }}</h2>
+        <h4>{{ slide.type }}</h4>
+        <a class="btn"><div class="text">Learn More</div><span></span></a>
+      </div>
+      <div class="about">
           <h3>{{ slide.role }}</h3>
           <ul>
             {% for item in slide.items %}
@@ -19,12 +25,6 @@
 
           <a class="link" href="{{ slide.cta }}" target="_blank">{{ slide.cta_text }}</a>
         </div>
-      </div>
-      <div class="titles">
-        <h2>{{ slide.headline|safe }}</h2>
-        <h4>{{ slide.type }}</h4>
-        <a class="btn"><div class="text">Learn More</div><span></span></a>
-      </div>
     </div>
 
   {% endfor %}
