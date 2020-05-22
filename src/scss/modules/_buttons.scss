@@ -23,12 +23,14 @@ $btn-color-mobile: darken($base-light, 10%);
 
   @include mobile {
     background-color: $btn-color;
+    border: none;
     color: $base-text;
-    line-height: 40px;
-    height: 40px;
-    margin-top: 15px;
-    width: 150px;
+    line-height: 60px;
+    height: 60px;
+    margin-bottom: -30px;
+    width: 170px;
     font-size: 14px;
+    color: $white;
   }
 
   span {
@@ -66,7 +68,7 @@ $btn-color-mobile: darken($base-light, 10%);
 
   &.dark {
     @include mobile {
-      @include button($dark-gray-blue);
+      @include button(darken($btn-color-mobile, 10%));
       display: inline-table !important;
     }
   }

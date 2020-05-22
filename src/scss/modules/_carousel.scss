@@ -65,10 +65,7 @@
     color: $base-text;
     margin-top: 10vw;
     @extend .vertical-align;
-
-    @include tablet {
-      @include textShadow($white, 0.5);
-    }
+    @include textShadow($white, 0.5);
 
     @include mobile {
       height: 60vmax;
