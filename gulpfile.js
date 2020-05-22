@@ -10,6 +10,7 @@ const cleanCSS = require("gulp-clean-css");
 const autoprefixer = require("gulp-autoprefixer");
 const uglify = require("gulp-uglify");
 const htmlmin = require("gulp-htmlmin");
+const imagemin = require("gulp-imagemin");
 const markdown = require("gulp-markdown");
 const sourcemaps = require("gulp-sourcemaps");
 const browserSync = require("browser-sync").create();
@@ -19,9 +20,12 @@ const shared = {
     return del(["dist"]);
   },
   assets: () => {
-    return gulp.src("src/assets/**/*").pipe(gulp.dest("dist/assets"));
+    return gulp
+      .src("src/assets/**/*")
+      .pipe(imagemin())
+      .pipe(gulp.dest("dist/assets"));
   },
-  help: (done) => {
+  help: done => {
     console.info(
       "###############################################################################"
     );
@@ -89,7 +93,7 @@ const dev = {
       .pipe(source("main.js"))
       .pipe(gulp.dest("dist/js"));
   },
-  reload: (done) => {
+  reload: done => {
     browserSync.reload();
     return done();
   },
