@@ -17,11 +17,11 @@
     }
 
     a {
-      color: $base-text;
+      color: $base-light;
       transition: all 0.2s ease-in;
 
       &.active {
-        color: $base-light;
+        color: $base-text;
       }
     }
   }
