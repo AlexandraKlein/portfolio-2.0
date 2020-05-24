@@ -95,13 +95,10 @@
         font-size: 22px;
       }
     }
+  }
 
-    .btn {
-      @include mobile {
-        position: absolute;
-        bottom: 0;
-      }
-    }
+  .btn.mobile-only {
+    margin: 75px 0 0 30px;
   }
 
   .slick-slide {
@@ -235,6 +232,7 @@
       @extend .align-both;
       opacity: 0;
       pointer-events: none;
+      transition: all 0.2s;
 
       @include mobile {
         width: 70%;
@@ -281,13 +279,11 @@
     }
 
     .slide.open {
-      .circle {
-        @include tablet {
-          z-index: 1;
-        }
-      }
-
       .titles {
+        @include mobile {
+          z-index: -1;
+        }
+
         > *:not(.btn) {
           opacity: 0;
           pointer-events: none;

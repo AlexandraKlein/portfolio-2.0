@@ -16,15 +16,17 @@
               <li>{{ item }}</li>
             {% endfor %}
           </ul>
-
           <a class="link" href="{{ slide.cta }}" target="_blank">{{ slide.cta_text }}</a>
         </div>
       </div>
       <div class="titles">
-        <h2>{{ slide.headline|safe }}</h2>
-        <h4>{{ slide.type }}</h4>
-        <a class="btn"><div class="text">Learn More</div><span></span></a>
+        <div>
+          <h2>{{ slide.headline|safe }}</h2>
+          <h4>{{ slide.type }}</h4>
+        </div>
+        <a class="btn desktop-only"><div class="text">Learn More</div><span></span></a>
       </div>
+      <a class="btn mobile-only"><div class="text">Learn More</div><span></span></a>
     </div>
 
   {% endfor %}
