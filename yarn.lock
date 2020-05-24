@@ -2868,11 +2868,6 @@ graceful-fs@4.X, graceful-fs@^4.0.0, graceful-fs@^4.1.11, graceful-fs@^4.1.2, gr
   resolved "https://rival.jfrog.io/rival/api/npm/npm/graceful-fs/-/graceful-fs-4.2.3.tgz#4a12ff1b60376ef09862c2093edd908328be8423"
   integrity sha1-ShL/G2A3bvCYYsIJPt2Qgyi+hCM=
 
-gsap@^3.2.6:
-  version "3.2.6"
-  resolved "https://rival.jfrog.io/rival/api/npm/npm/gsap/-/gsap-3.2.6.tgz#fbaddab30c8c2fb029d61ef56f667b42f99c932f"
-  integrity sha1-+63aswyML7Ap1h71b2Z7Qvmcky8=
-
 gulp-autoprefixer@^7.0.0:
   version "7.0.1"
   resolved "https://rival.jfrog.io/rival/api/npm/npm/gulp-autoprefixer/-/gulp-autoprefixer-7.0.1.tgz#3c0dc26afc802d317e7560a7f760a0399049075a"

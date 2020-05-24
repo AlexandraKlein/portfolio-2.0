@@ -2,7 +2,7 @@ import "./jquery-global.js";
 import Barba from "barba.js";
 import { MorphEls } from "./morphEls";
 import { SlickCarousel } from "./carousels";
-// import { Parallax } from "./parallax";
+import { Parallax } from "./parallax";
 import { VideoPlayer } from "./video";
 import { DirectionAwareButton } from "./buttonEffect";
 import "jquery-scrollify";
@@ -16,7 +16,7 @@ export default class App {
     this.initScollify();
     this.initMorphEls();
     this.initSlickCarousel();
-    // this.initParallax();
+    this.initParallax();
     this.initVideoPlayer();
     this.initButtonEffect();
   }
