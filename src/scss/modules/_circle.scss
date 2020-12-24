@@ -49,8 +49,17 @@
     }
   }
 
+  .open {
+    .circle {
+      @include tablet {
+        z-index: 1;
+      }
+    }
+  }
+
   .slick-slide:not(.active) {
     .circle {
+      position: relative;
       width: 45vw;
       height: 45vw;
 
