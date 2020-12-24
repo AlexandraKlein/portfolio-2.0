@@ -26,6 +26,15 @@
       animation: fadeOut 0.2s ease-in forwards 1s;
     }
 
+    .me2 {
+      width: 106%;
+      right: -3%;
+
+      @include mobile {
+        display: none;
+      }
+    }
+
     @include tablet {
       right: -12.5vw;
     }

@@ -1,31 +1,17 @@
-{% set page_title = "About" %}
-{% set namespace = "about" %}
+{% set page_title = "About" %} {% set namespace = "about" %} {% set paginations
+= [ { "section" : "intro" }, { "section" : "summary" }, { "section" : "skills" }
+] %} {% extends "templates/layout.html" %} {% block main %}
 
-{% set paginations = [
-    {
-      "section"  : "intro"
-    },
-    {
-      "section"  : "summary"
-    },
-    {
-      "section"  : "skills"
-    }
-  ]
-%}
-
-{% extends "templates/layout.html" %}
-
-{% block main %}
-
-<section class="main-section scroll-section intro active" data-section-name="intro">
-
+<section
+  class="main-section scroll-section intro active"
+  data-section-name="intro"
+>
   <div class="circle">
     <div class="video-container">
       <video autoplay muted loop playsinline>
-        <source src="assets/ali-cat.mp4" type="video/mp4">
-        <source src="assets/ali-cat.ogv" type="video/ogg">
-        <source src="assets/ali-cat.webm" type="video/webm">
+        <source src="assets/ali-cat.mp4" type="video/mp4" />
+        <source src="assets/ali-cat.ogv" type="video/ogg" />
+        <source src="assets/ali-cat.webm" type="video/webm" />
         Your browser does not support the video tag.
       </video>
     </div>
@@ -34,12 +20,14 @@
     <h1>More</h1>
     <h2>about me</h2>
   </div>
-
 </section>
 
-<section class="main-section scroll-section summary" data-section-name="summary">
-
+<section
+  class="main-section scroll-section summary"
+  data-section-name="summary"
+>
   <div class="circle blue">
+    <img src="assets/ali-about2.png" class="me me2" alt="Ali Klein" />
   </div>
   <div class="copy">
     <div class="titles">
@@ -49,16 +37,24 @@
       <p><span>Who</span>Ali Klein</p>
       <p><span>Born</span>June 13th, Pittsburgh, PA</p>
       <p><span>Home</span>Santa Monica, California</p>
-      <p><span>Schools</span>New York University &amp; Art Institute of California, Los Angeles</p>
-      <p><span>What</span>Frontend Web Development. Focus on UX &amp; UI. Designer.</p>
-      <p><span>In Sum</span>As a passionate designer, I easily combine expertise in both visual design and web development in order to offer an aesthetically pleasing and functional user experince.</p>
+      <p>
+        <span>Schools</span>New York University &amp; Art Institute of
+        California, Los Angeles
+      </p>
+      <p>
+        <span>What</span>Frontend Web Development. Focus on UX &amp; UI.
+        Designer.
+      </p>
+      <p>
+        <span>In Sum</span>As a passionate designer, I easily combine expertise
+        in both visual design and web development in order to offer an
+        aesthetically pleasing and functional user experince.
+      </p>
     </figure>
   </div>
-
 </section>
 
 <section class="main-section scroll-section skills" data-section-name="skills">
-
   <div class="circle blue"></div>
 
   <div class="copy skills">
@@ -95,14 +91,9 @@
       <div class="skill docker"></div>
       <div class="skill git"></div>
       <div class="skill jira"></div>
-
     </div>
   </div>
-
 </section>
 
-{% include "templates/arrows.html" %}
-
-{% include "templates/pagination.html" %}
-
+{% include "templates/arrows.html" %} {% include "templates/pagination.html" %}
 {% endblock %}
