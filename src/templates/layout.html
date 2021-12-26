@@ -1,46 +1,22 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js">
+  {% set navigations = [ { "name": "home", "url": "/" }, { "name": "work",
+  "url": "work.html" }, { "name": "about", "url": "about.html" }, { "name":
+  "contact", "url": "contact.html" }, { "name": "pens", "url" :
+  "https://codepen.io/AliKlein/" } ] %} {% include "templates/head.html" %}
 
-{% set navigations = [
-    {
-      "name": "home",
-      "url": "/"
-    },
-    {
-      "name": "work",
-      "url": "work.html"
-    },
-      {
-      "name": "about",
-      "url": "about.html"
-    },
-      {
-      "name": "contact",
-      "url": "contact.html"
-    },
-    {
-      "name": "pens",
-      "url" : "https://codepen.io/AliKlein/"
-    }
-  ]
-%}
+  <body class="{{ namespace }}" id="{{ namespace }}">
+    {% include "templates/navigation.html" %}
 
-{% include "templates/head.html" %}
+    <div id="barba-wrapper">
+      <div
+        class="barba-container landing-animation transition-in"
+        data-namespace="{{ namespace }}"
+      >
+        {% block main %} {% endblock %}
+      </div>
+    </div>
 
-<body class="{{ namespace }}" id="{{ namespace }}">
-
-{% include "templates/navigation.html" %}
-
-<div id="barba-wrapper">
-  <div class="barba-container landing-animation transition-in" data-namespace="{{ namespace }}">
-
-    {% block main %}
-    {% endblock %}
-
-  </div>
-</div>
-
-{% include "templates/scripts.html" %}
-
-</body>
+    {% include "templates/scripts.html" %}
+  </body>
 </html>

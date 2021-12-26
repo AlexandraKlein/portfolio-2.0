@@ -1,6 +1,6 @@
 const gulp = require("gulp");
 const del = require("del");
-const sass = require("gulp-sass");
+const sass = require("gulp-sass")(require("sass"));
 const nunjucksRender = require("gulp-nunjucks-render");
 const browserify = require("browserify");
 const babelify = require("babelify");

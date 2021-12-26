@@ -154,7 +154,7 @@ export default class App {
       $document.trigger("allPagesEnter");
     });
 
-    Barba.Dispatcher.on("initStateChange", currentStatus => {
+    Barba.Dispatcher.on("initStateChange", () => {
       $document.trigger("initStateChange");
     });
 
@@ -177,7 +177,7 @@ export default class App {
       easing: "easeOutExpo",
       scrollSpeed: 1000,
       scrollbars: false,
-      setHeights: true,
+      setHeights: false,
       overflowScroll: false,
       updateHash: false,
       afterRender() {
@@ -239,14 +239,15 @@ export default class App {
       $(".pagination a")
         .toArray()
         .forEach((el, i) => {
-          $(el).click(e => {
+          $(el).on("click", (e) => {
             e.preventDefault();
             $.scrollify.move(i);
           });
         });
 
-      $(".arrow-down").click(() => $.scrollify.next());
-      $(".arrow-up").click(() => $.scrollify.previous());
+      $(".arrow-down").on("click", () => $.scrollify.next());
+
+      $(".arrow-up").on("click", () => $.scrollify.previous());
     }
 
     $document.ready(() => {
