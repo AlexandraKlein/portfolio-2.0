@@ -17,7 +17,6 @@ export default class App {
     this.initMorphEls();
     this.initSlickCarousel();
     this.initParallax();
-    this.initVideoPlayer();
     this.initButtonEffect();
   }
 
@@ -225,13 +224,21 @@ export default class App {
           }
         }
 
-        if (i === panels.length - 1) {
-          $(".arrow-down").addClass("disabled");
-        } else if (i === 0) {
-          $(".arrow-up").addClass("disabled");
-        } else {
-          $(".arrow-up, .arrow-down").removeClass("disabled");
+        function handleArrows() {
+          if (i === panels.length - 1) {
+            $(".arrow-down").addClass("disabled");
+          } else {
+            $(".arrow-down").removeClass("disabled");
+          }
+
+          if (i === 0) {
+            $(".arrow-up").addClass("disabled");
+          } else {
+            $(".arrow-up").removeClass("disabled");
+          }
         }
+
+        handleArrows();
       },
     };
 
@@ -288,15 +295,6 @@ export default class App {
     }
     $(document).on("workOnEnterCompleted", () => {
       Parallax();
-    });
-  }
-
-  initVideoPlayer() {
-    if ($body.hasClass("work")) {
-      $(() => VideoPlayer());
-    }
-    $(document).on("workOnEnterCompleted", () => {
-      VideoPlayer();
     });
   }
 
